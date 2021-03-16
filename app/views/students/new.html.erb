@@ -5,3 +5,12 @@
     <%= f.text_field :last_name %>
     <%= f.submit %>
 <%end%>
+
+<%= form_tag("/students") do %>
+    <%= label_tag('student[first_name]', "First Name") %>
+    <%= text_field_tag('student[first_name]') %>
+    <%= label_tag('student[last_name]', "Last Name") %>
+    <%= text_field_tag('student[last_name]') %>
+    <%= submit_tag("Create Student") %>
+<%end%>
+<div><%= link_to "Back to Students", students_path%></div>
